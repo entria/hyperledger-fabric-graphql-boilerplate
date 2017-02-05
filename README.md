@@ -2,10 +2,12 @@
 
 This is a boilerplate to start using hyperledger fabric blockchain with GraphQL
 
-it was based on: [fabric-boilerplate](https://github.com/IBM-Blockchain/fabric-boilerplate)
-it is based on GraphQL boilerplate code: [graphql-dataloader-boilerplate](https://github.com/entria/graphql-dataloader-boilerplate)
+- based on: [fabric-boilerplate](https://github.com/IBM-Blockchain/fabric-boilerplate)
+- based on GraphQL boilerplate code: [graphql-dataloader-boilerplate](https://github.com/entria/graphql-dataloader-boilerplate)
+- [Create-GraphQL](https://github.com/lucasbento/create-graphql) was used to generate GraphQL boilerplate
 
-[Create-GraphQL](https://github.com/lucasbento/create-graphql) was used to generate GraphQL boilerplate
+## Hire us
+You can hire us to build your next blockchain project using Hyperledger and GraphQL - [Entria](http://entria.com.br/)
 
 ## How to build Go chaincode locally
 
