@@ -1,0 +1,22 @@
+# NPM Dependencies
+node_modules
+
+# IntelliJ
+.idea
+
+.DS_Store
+npm-debug.log.*
+
+deploy/local/*
+!deploy/local/.gitkeep
+
+deploy/bluemix/keyValueStore/
+deploy/bluemix/chaincode_id
+
+src/build-chaincode/vendor
+src/build-chaincode/build-chaincode
+
+!src/build-chaincode/vendor/github.com/hyperledger/fabric
+
+coverage
+dist

@@ -1,0 +1,115 @@
+# Represents Airline
+type Airline implements Node {
+  # The ID of an object
+  id: ID!
+  _id: String
+
+  # Airline Name
+  name: String
+
+  # Airline alias
+  alias: String
+
+  # Airline code in the IATA scheme
+  iata: String
+
+  # Airline code in the ICAO scheme
+  icao: String
+
+  # Airline callsign
+  callsign: String
+
+  # Airline country
+  country: String
+  createdAt: String
+  updatedAt: String
+}
+
+input DeployMutationInput {
+  # function name to be invoked
+  fcn: String!
+
+  # args of this function
+  args: [String]
+  clientMutationId: String
+}
+
+type DeployMutationPayload {
+  results: String
+  clientMutationId: String
+}
+
+# Represents Hyperledger
+type Hyperledger {
+  # The ID of an object
+  id: ID!
+  users: [UserHyperledger]
+  user(id: String!): UserHyperledger
+  airline(id: String!): Airline
+  airlines: [Airline]
+}
+
+input InvokeMutationInput {
+  # function name to be invoked
+  fcn: String!
+
+  # args of this function
+  args: [String]
+  clientMutationId: String
+}
+
+type InvokeMutationPayload {
+  results: String
+  clientMutationId: String
+}
+
+type Mutation {
+  # Generic Invoke blockchain mutation
+  Invoke(input: InvokeMutationInput!): InvokeMutationPayload
+
+  # Deploy a new chaincode with following arguments
+  Deploy(input: DeployMutationInput!): DeployMutationPayload
+
+  # UserCreate using invoke api under the hood
+  HPUserCreate(input: UserCreateMutationInput!): UserCreateMutationPayload
+}
+
+# An object with an ID
+interface Node {
+  # The id of the object.
+  id: ID!
+}
+
+# The root of all... queries
+type Query {
+  # Fetches an object given its ID
+  node(
+    # The ID of an object
+    id: ID!
+  ): Node
+  hyperledger: Hyperledger
+}
+
+input UserCreateMutationInput {
+  name: String!
+  password: String!
+  email: String!
+
+  # user passport
+  passport: String
+  clientMutationId: String
+}
+
+type UserCreateMutationPayload {
+  results: String
+  clientMutationId: String
+}
+
+# Represents UserType
+type UserHyperledger {
+  # id of user in the blockchain
+  Id: String
+
+  # name of user in the blockchain
+  Name: String
+}

@@ -1,0 +1,13 @@
+{
+  "directories": {
+    "source": "src",
+    "connection": "graphql/connection",
+    "loader": "graphql/loader",
+    "model": "graphql/model",
+    "mutation": "graphql/mutation",
+    "type": "graphql/type"
+  },
+  "files": {
+    "schema": "schema"
+  }
+}

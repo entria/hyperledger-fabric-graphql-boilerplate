@@ -1,0 +1,4 @@
+{
+  "ignore": [".git", "src/chaincode/*", "nodemon.json"],
+  "verbose": false
+}
