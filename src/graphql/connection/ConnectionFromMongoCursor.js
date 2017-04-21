@@ -20,7 +20,7 @@ export default class ConnectionFromMongoCursor {
    * be the default.
    */
   static getOffsetWithDefault(cursor, defaultOffset) {
-    if (cursor === undefined) {
+    if (cursor === undefined || cursor === null) {
       return defaultOffset;
     }
     const offset = ConnectionFromMongoCursor.cursorToOffset(cursor);
